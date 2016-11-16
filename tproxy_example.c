@@ -213,7 +213,7 @@ int main(int argc, char *argv[]){
         exit(EXIT_FAILURE);
     }
 
-    if(setsockopt(listen_fd, SOL_SOCKET, SO_REUSEADDR, &yes, sizeof(yes)) 
+    if(setsockopt(listen_fd, SOL_SOCKET, SO_REUSEPORT, &yes, sizeof(yes)) 
             == -1){
         perror("setsockopt (SO_REUSEADDR): ");
         close(listen_fd);
